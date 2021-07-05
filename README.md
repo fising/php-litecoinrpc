@@ -7,7 +7,7 @@ This project is based on [php-bitcoinrpc](https://github.com/denpamusic/php-bitc
 Run ```php composer.phar require majestic/php-litecoinrpc``` in your project directory or add following lines to composer.json
 ```javascript
 "require": {
-    "majestic/php-litecoinrpc": "^2.0"
+    "fising/php-litecoinrpc": "^2.0"
 }
 ```
 and run ```php composer.phar update```.
