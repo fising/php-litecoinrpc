@@ -1,5 +1,5 @@
 {
-    "name": "majestic/php-litecoinrpc",
+    "name": "fising/php-litecoinrpc",
 	"type": "library",
 	"description": "Litecoin JSON-RPC client based on GuzzleHttp",
 	"keywords": ["litecoin","api","jsonrpc","guzzle"],
