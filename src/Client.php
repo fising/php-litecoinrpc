@@ -36,10 +36,10 @@ class Client
      * Constructs new client.
      *
      * @param mixed $config
-     *
+     * @param array $extras
      * @return void
      */
-    public function __construct($config = [])
+    public function __construct($config = [], $extras = [])
     {
         // init defaults
         $config = $this->defaultConfig($this->parseUrl($config));
@@ -53,7 +53,7 @@ class Client
         );
 
         // construct client
-        $this->client = new GuzzleHttp([
+        $this->client = new GuzzleHttp(array_merge([
             'base_uri'    => "${config['scheme']}://${config['host']}:${config['port']}",
             'auth'        => [
                 $config['user'],
@@ -62,7 +62,7 @@ class Client
             'verify'      => isset($config['ca']) && is_file($config['ca']) ?
                 $config['ca'] : true,
             'handler'     => $handlerStack,
-        ]);
+        ], $extras));
     }
 
     /**
